@@ -23,7 +23,7 @@ mkdir -p ${GOPATH}/src/github.com/gogits/
 ln -s /app/gogs/ ${GOPATH}/src/github.com/gogits/gogs
 cd ${GOPATH}/src/github.com/gogits/gogs
 glide install
-make build TAGS="sqlite cert pam"
+make build TAGS="mysql redis cert pam"
 
 # Cleanup GOPATH & vendoring dir
 rm -r $GOPATH /app/gogs/vendor
